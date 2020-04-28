@@ -1,8 +1,9 @@
-namespace App {
-    // Project State Management
-    type Listener<T> = (items: T[]) => void;
+// Project State Management
+import {Project, ProjectStatus} from "../models/project.js";
 
-    class State<T> {
+type Listener<T> = (items: T[]) => void;
+
+class State<T> {
         protected listeners: Listener<T>[] = [];
         addListener(listenerFn: Listener<T>) {
             this.listeners.push(listenerFn);
@@ -59,5 +60,5 @@ namespace App {
     }
 
     export const projectState = ProjectState.getInstance();
-}
+
 

@@ -1,6 +1,5 @@
-namespace App {
-    // Component Base Class
-    export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
+// Component Base Class
+export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
         templateElement: HTMLTemplateElement;
         element: U;  // HTMLElement  and HTMLFormElement;
         hostElement : T; //HTMLDivElement;
@@ -24,4 +23,4 @@ namespace App {
         abstract renderContent(): void;    // private abstract is not possible
     }
 
-}
+
